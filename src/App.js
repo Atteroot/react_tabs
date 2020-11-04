@@ -1,20 +1,21 @@
 import React from 'react';
 import './App.css';
-import { Tabs } from './components/Tabs';
 
+import 'semantic-ui-css/semantic.min.css';
+import { Tab } from 'semantic-ui-react';
 // eslint-disable-next-line no-unused-vars
 const tabs = [
   {
-    title: 'Tab 1',
-    content: 'Some text 1',
+    menuItem: 'Tab 1',
+    render: () => <Tab.Pane>Some text 1</Tab.Pane>,
   },
   {
-    title: 'Tab 2',
-    content: 'Some text 2',
+    menuItem: 'Tab 2',
+    render: () => <Tab.Pane>Some text 2</Tab.Pane>,
   },
   {
-    title: 'Tab 3',
-    content: 'Some text 3',
+    menuItem: 'Tab 3',
+    render: () => <Tab.Pane>Some text 3</Tab.Pane>,
   },
 ];
 
@@ -23,10 +24,6 @@ const preparedTabs = tabs.map((item, index) => ({
   id: index,
 }));
 
-const App = () => (
-  <div>
-    <Tabs tabs={preparedTabs} />
-  </div>
-);
+const App = () => <Tab panes={preparedTabs} />;
 
 export default App;
