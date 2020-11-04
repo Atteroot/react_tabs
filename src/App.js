@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-
 import 'semantic-ui-css/semantic.min.css';
 import { Tab } from 'semantic-ui-react';
 // eslint-disable-next-line no-unused-vars
